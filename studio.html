@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SeniorStories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              studio: {
+                base: "#fff8f6",
+                surface: "#fffdfc",
+                ink: "#2f1723",
+                muted: "#7c5d69",
+                line: "#f2cfd7",
+                coral: "#ff7a59",
+                coralDeep: "#eb5a37",
+                peach: "#ffb38f",
+                rose: "#ff5c8a",
+                roseSoft: "#ffe1ea",
+                blush: "#fff1f4"
+              }
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+              sans: ["Manrope", "sans-serif"]
+            },
+            boxShadow: {
+              glow: "0 28px 80px rgba(255, 92, 138, 0.16)",
+              card: "0 18px 48px rgba(47, 23, 35, 0.09)"
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="min-h-screen bg-studio-base font-sans text-studio-ink">
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(255,122,89,0.22),transparent_24%),radial-gradient(circle_at_top_right,rgba(255,92,138,0.18),transparent_28%),linear-gradient(180deg,#fffdfd_0%,#fff5f3_48%,#fff8fb_100%)]"
+    ></div>
+
+    <div class="site-nav-shell">
+      <nav class="site-nav mx-auto w-[min(calc(100%-1.25rem),76rem)] px-4 py-[0.7rem] md:w-[min(calc(100%-2rem),76rem)] md:px-6" aria-label="Primary">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <a href="./index.html" class="inline-flex w-fit items-center rounded-[1.5rem] px-2 py-1" aria-label="SeniorStories home">
+            <img src="./assets/seniorstories-logo-nav.jpeg" alt="SeniorStories logo" class="site-nav__logo block h-auto w-[12rem] max-w-full md:w-[14rem]" />
+          </a>
+          <div class="flex flex-col gap-3 md:flex-row md:flex-wrap md:items-center md:justify-end">
+            <a class="site-nav__link" href="./index.html#pricing">Pricing</a>
+            <a class="site-nav__link" href="./index.html#feedback">Feedback</a>
+            <a class="site-nav__link" href="./signup.html">Sign up</a>
+            <a class="site-nav__cta" href="./studio.html">Start Creating</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mx-auto w-[min(calc(100%-1.25rem),76rem)] pb-5 pt-28 md:w-[min(calc(100%-2rem),76rem)] md:pb-8 md:pt-32 lg:pb-10" id="studio-shell">
+      <header class="p-7 md:p-10" id="studio-hero">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(300px,0.85fr)] lg:items-center">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-[0.22em] text-studio-coralDeep">SeniorStories</p>
+            <h1 class="mt-4 font-display text-4xl leading-tight md:text-5xl">Create your video<br />step by step.</h1>
+            <p class="body-copy mt-5 max-w-2xl text-lg text-studio-muted">
+              Pick a story prompt, upload your clip, review the AI-generated draft, and prepare a TikTok-ready post in one guided flow.
+            </p>
+          </div>
+          <div class="rounded-[1.75rem] border border-studio-line/70 bg-white/90 p-6 shadow-sm">
+            <p class="text-sm font-extrabold uppercase tracking-[0.16em] text-studio-coralDeep">Included</p>
+            <ul class="pricing-list mt-4 space-y-3 text-base text-studio-muted">
+              <li>Friendly topic suggestions</li>
+              <li>Captions, hooks, and hashtag help</li>
+              <li>Feed video preview and TikTok handoff</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main class="mt-16 space-y-6" id="studio-main">
+        <section class="rounded-full border border-white/80 bg-white/80 p-2 shadow-card ring-1 ring-studio-line/50" id="progress-steps" aria-label="Progress">
+          <div class="grid gap-2 sm:grid-cols-3 xl:grid-cols-3">
+            <div class="step rounded-full px-4 py-3 text-center text-sm font-extrabold uppercase tracking-[0.14em] md:text-base" data-step="1">1. Topic</div>
+            <div class="step rounded-full px-4 py-3 text-center text-sm font-extrabold uppercase tracking-[0.14em] md:text-base" data-step="2">2. Upload</div>
+            <div class="step rounded-full px-4 py-3 text-center text-sm font-extrabold uppercase tracking-[0.14em] md:text-base" data-step="3">3. Edit</div>
+          </div>
+        </section>
+
+        <section class="panel rounded-[2rem] border border-white/80 bg-panel-glow p-6 shadow-card ring-1 ring-studio-line/60 md:p-8" id="landing-panel" data-screen="landing" aria-labelledby="landing-title"></section>
+
+        <section class="panel rounded-[2rem] border border-white/80 bg-panel-glow p-6 shadow-card ring-1 ring-studio-line/60 md:p-8 !mt-6" id="topics-panel" data-screen="topics" aria-labelledby="topics-title">
+          <div class="max-w-3xl">
+            <h2 id="topics-title" class="font-display text-4xl leading-tight md:text-5xl">Choose a topic to talk about</h2>
+            <p class="body-copy mt-4 text-lg text-studio-muted">Pick one prompt that feels natural. You can always change it later.</p>
+          </div>
+          <div class="topic-grid mt-8 grid gap-4 lg:grid-cols-2" id="topic-grid" role="list"></div>
+          <div class="selection-summary mt-6 rounded-[1.75rem] border border-studio-line/70 bg-white/85 p-6 shadow-sm" id="topic-summary" aria-live="polite">
+            <p class="feature-copy text-base text-studio-muted">Select a topic card to see a friendly prompt and talking points.</p>
+          </div>
+          <div class="mt-8 flex flex-wrap justify-end gap-3">
+            <button class="button-lift inline-flex min-h-[3.75rem] items-center justify-center rounded-full border border-studio-line bg-white/85 px-6 text-base font-extrabold text-studio-ink shadow-card transition" data-action="more-stories">
+              <span class="material-symbols-outlined feature-button__icon" aria-hidden="true">add</span>
+              More story
+            </button>
+            <button class="button-lift inline-flex min-h-[3.75rem] items-center justify-center rounded-full bg-gradient-to-r from-studio-coral to-studio-rose px-6 text-base font-extrabold text-white shadow-[0_18px_36px_rgba(255,92,138,0.28)] transition disabled:cursor-not-allowed disabled:opacity-50" data-action="to-upload" disabled>
+              Continue to Video Upload
+            </button>
+          </div>
+        </section>
+
+        <section class="panel rounded-[2rem] border border-white/80 bg-panel-glow p-6 shadow-card ring-1 ring-studio-line/60 md:p-8" id="upload-panel" data-screen="upload" aria-labelledby="upload-title">
+          <div class="max-w-3xl">
+            <h2 id="upload-title" class="font-display text-4xl leading-tight md:text-5xl">Upload your video</h2>
+            <p class="body-copy mt-4 text-lg text-studio-muted">Record yourself sharing your story, then upload the file here.<br />We’ll move you straight into editing after you choose a video.</p>
+          </div>
+          <label class="upload-box mt-8 grid cursor-pointer gap-3 rounded-[1.9rem] border-2 border-dashed border-studio-line bg-white/85 p-8 text-center shadow-sm transition hover:border-studio-coral/50 hover:bg-white" for="video-input">
+            <input id="video-input" type="file" accept="video/*" />
+            <span class="material-symbols-outlined mx-auto text-[4.5rem] leading-none text-studio-coralDeep" aria-hidden="true">movie</span>
+            <span class="text-2xl font-extrabold text-studio-ink">Tap to choose a video file</span>
+            <span class="text-base leading-7 text-studio-muted">MP4, MOV, and other common formats are supported by your browser.</span>
+          </label>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <button class="button-lift inline-flex min-h-[3.75rem] items-center justify-center rounded-full border border-studio-line bg-white/85 px-6 text-base font-extrabold text-studio-ink shadow-card transition" data-action="back-topics">Back</button>
+          </div>
+        </section>
+
+        <section class="panel rounded-[2rem] border border-white/80 bg-panel-glow p-6 shadow-card ring-1 ring-studio-line/60 md:p-8" id="processing-panel" data-screen="processing" aria-labelledby="processing-title">
+          <div class="max-w-3xl">
+            <h2 id="processing-title" class="font-display text-4xl leading-tight md:text-5xl md:whitespace-nowrap">Your AI editor is preparing the video</h2>
+            <p class="body-copy mt-4 text-lg text-studio-muted">We’re creating an engaging title, a strong opening hook, readable captions, and suggested hashtags.</p>
+          </div>
+          <div class="mt-8 grid gap-6 rounded-[1.85rem] border border-studio-line/70 bg-white/90 p-6 shadow-sm md:grid-cols-[90px_minmax(0,1fr)] md:items-center">
+            <div class="processing-card__spinner mx-auto h-[84px] w-[84px] rounded-full border-[8px] border-studio-roseSoft border-t-studio-coral"></div>
+            <ul class="space-y-3 text-base leading-7 text-studio-muted">
+              <li class="processing-state is-done rounded-2xl bg-studio-blush px-4 py-3">Analyzing your selected topic</li>
+              <li class="processing-state is-done rounded-2xl bg-studio-blush px-4 py-3">Preparing a short script guide</li>
+              <li class="processing-state is-active rounded-2xl bg-gradient-to-r from-studio-roseSoft to-[#fff1e8] px-4 py-3">Generating TikTok-ready text</li>
+              <li class="processing-state rounded-2xl bg-white px-4 py-3">Packaging your final review screen</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel rounded-[2rem] border border-white/80 bg-panel-glow p-6 shadow-card ring-1 ring-studio-line/60 md:p-8" id="results-panel" data-screen="results" aria-labelledby="results-title">
+          <div class="max-w-3xl">
+            <h2 id="results-title" class="mt-3 font-display text-4xl leading-tight md:text-5xl md:whitespace-nowrap">Your TikTok-ready video draft is here</h2>
+            <p class="body-copy mt-4 text-lg text-studio-muted">Review your post details and feed video preview before publishing.</p>
+          </div>
+          <div class="results-layout mt-8 grid gap-5 xl:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)]">
+            <article class="rounded-[1.85rem] border border-studio-line/70 bg-white/90 p-5 shadow-sm">
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-studio-coralDeep">Details</p>
+                  <h3 class="mt-2 font-display text-3xl">Edit your post details</h3>
+                </div>
+              </div>
+              <div class="mt-6 grid gap-5">
+                <section class="rounded-[1.4rem] bg-[#fff8fa] p-4">
+                  <h4 class="text-sm font-extrabold uppercase tracking-[0.16em] text-studio-coralDeep">Title</h4>
+                  <p class="mt-2 text-sm leading-7 text-studio-muted">Choose a suggestion or write your own title.</p>
+                  <div id="title-options" class="mt-4 flex flex-wrap gap-2"></div>
+                  <label class="mt-4 block text-sm font-extrabold uppercase tracking-[0.16em] text-studio-coralDeep" for="result-title">Edit title</label>
+                  <textarea id="result-title" class="editor-field mt-2 w-full rounded-[1.2rem] border border-studio-line/80 bg-[#fffafb] px-4 py-3 text-base leading-7 text-studio-ink" rows="3"></textarea>
+                </section>
+                <section class="rounded-[1.4rem] bg-[#fff8fa] p-4">
+                  <h4 class="text-sm font-extrabold uppercase tracking-[0.16em] text-studio-coralDeep">Hook</h4>
+                  <p class="mt-2 text-sm leading-7 text-studio-muted">Create a strong opening line for the first few seconds.</p>
+                  <div id="hook-options" class="mt-4 flex flex-wrap gap-2"></div>
+                  <label class="mt-4 block text-sm font-extrabold uppercase tracking-[0.16em] text-studio-coralDeep" for="result-hook">Edit hook</label>
+                  <textarea id="result-hook" class="editor-field mt-2 w-full rounded-[1.2rem] border border-studio-line/80 bg-[#fffafb] px-4 py-3 text-base leading-7 text-studio-ink" rows="4"></textarea>
+                </section>
+                <section class="rounded-[1.4rem] bg-[#fff8fa] p-4">
+                  <h4 class="text-sm font-extrabold uppercase tracking-[0.16em] text-studio-coralDeep">Hashtags</h4>
+                  <p class="mt-2 text-sm leading-7 text-studio-muted">Add the hashtags you want to publish with this post.</p>
+                  <textarea id="hashtag-list" class="editor-field mt-4 w-full rounded-[1.2rem] border border-studio-line/80 bg-[#fffafb] px-4 py-3 text-base leading-7 text-studio-ink" rows="3"></textarea>
+                </section>
+              </div>
+            </article>
+            <article class="rounded-[1.85rem] border border-studio-line/70 bg-white/90 p-5 shadow-sm">
+              <p class="text-sm font-extrabold uppercase tracking-[0.18em] text-studio-coralDeep">Feed video</p>
+              <h3 class="mt-2 font-display text-3xl">See how your post looks</h3>
+              <p class="mt-3 text-sm leading-7 text-studio-muted">Preview the video as viewers would experience it in the feed.</p>
+              <div class="feed-video-card mt-5">
+                <div class="feed-video-card__top">
+                  <div>
+                    <p id="result-feed-topic" class="text-sm font-extrabold uppercase tracking-[0.16em] text-white/80"></p>
+                    <p id="result-feed-title" class="mt-2 text-lg font-extrabold text-white"></p>
+                  </div>
+                  <span class="feed-video-card__badge">Preview</span>
+                </div>
+                <div class="captioned-video mt-4">
+                  <video controls playsinline id="result-player" class="w-full rounded-[1.25rem] bg-black"></video>
+                </div>
+                <div class="feed-video-card__meta mt-4">
+                  <p id="result-feed-hook" class="text-base leading-7 text-white/90"></p>
+                  <div id="result-feed-tags" class="mt-4 flex flex-wrap gap-2"></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="mt-8 flex flex-wrap items-center justify-between gap-3">
+            <button class="button-lift inline-flex min-h-[3.75rem] items-center justify-center rounded-full border border-studio-line bg-white/85 px-6 text-base font-extrabold text-studio-ink shadow-card transition" data-action="back-upload">Back</button>
+            <div class="flex flex-wrap justify-end gap-3">
+              <button class="button-lift inline-flex min-h-[3.75rem] items-center justify-center rounded-full border border-studio-line bg-white/85 px-6 text-base font-extrabold text-studio-ink shadow-card transition" data-action="open-tiktok-help">
+                <span class="material-symbols-outlined feature-button__icon" aria-hidden="true">help</span>
+                How to Post
+              </button>
+              <button class="button-lift inline-flex min-h-[3.75rem] items-center justify-center rounded-full bg-gradient-to-r from-studio-coral to-studio-rose px-6 text-base font-extrabold text-white shadow-[0_18px_36px_rgba(255,92,138,0.28)] transition" data-action="open-tiktok-upload">Post in TikTok</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer-shell mt-24">
+      <div class="site-footer mx-auto w-screen border-y border-white/80 bg-white/85 px-6 py-8 shadow-card ring-1 ring-studio-line/50 backdrop-blur-xl md:px-8">
+        <div class="mx-auto flex w-[min(calc(100%-1.25rem),76rem)] flex-col gap-8 md:w-[min(calc(100%-2rem),76rem)] lg:flex-row lg:items-center lg:justify-between">
+          <div class="max-w-xl">
+            <a href="./index.html" class="inline-flex w-fit items-center" aria-label="SeniorStories home">
+              <img src="./assets/seniorstories-logo-nav.jpeg" alt="SeniorStories logo" class="site-footer__logo block h-auto w-[11.5rem] max-w-full" />
+            </a>
+            <p class="mt-4 text-base leading-7 text-studio-muted">Simple, encouraging video creation for seniors who want to share their stories with the next generation.</p>
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <a class="site-footer__link" href="./index.html#home">Home</a>
+            <a class="site-footer__link" href="./index.html#pricing">Pricing</a>
+            <a class="site-footer__link" href="./index.html#feedback">Feedback</a>
+            <a class="site-footer__link" href="./signup.html">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./site.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
